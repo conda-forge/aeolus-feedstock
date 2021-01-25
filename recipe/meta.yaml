@@ -1,5 +1,5 @@
 {% set name = "aeolus" %}
-{% set version = "0.4.7" %}
+{% set version = "0.4.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/exoclim/aeolus/archive/{{ version }}.tar.gz
-  sha256: 10dbe1ab01db22d1bbd193dd3326c5b269273330f89d40bee3b8205faebb2080
+  sha256: 8dc1a13acda0d242c8ebe4cd37f21d07d3ae7d6a8ec348d715a6c37f9adb6669
 
 build:
   noarch: python
