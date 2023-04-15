@@ -1,11 +1,11 @@
-About aeolus
-============
+About aeolus-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aeolus-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/exoclim/aeolus
 
 Package license: LGPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aeolus-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python library for object-oriented analysis of atmospheric model output.
 
