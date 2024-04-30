@@ -21,7 +21,6 @@ requirements:
     - python >=3.10
     - pip
     - setuptools >=64
-    - setuptools-scm >=7
   run:
     - click >=8.1.7
     - click-default-group >=1.2.4
