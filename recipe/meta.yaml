@@ -12,21 +12,21 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
     - python >=3.10
     - pip
-    - setuptools >=61
+    - setuptools >=64
     - setuptools-scm >=7
   run:
     - click >=8.1.7
     - click-default-group >=1.2.4
     - python >=3.10
     - cached-property >=1.5.1
-    - cartopy
-    - cf-units
+    - cartopy >=0.21
+    - cf-units >=3.1
     - f90nml
     - iris >=3.9
     - latlon23 >=1.0.7
@@ -49,9 +49,7 @@ about:
   license: LGPL-3.0-only
   license_family: LGPL
   license_file: LICENSE
-  summary: Python library for object-oriented analysis of atmospheric model output.
-  description: |
-    aeolus is a pure-Python library for object-oriented analysis for atmospheric model output built on top of the scitools iris package <https://github.com/SciTools/iris>. It also includes small extensions to interoperate with MetPy and PyVista.
+  summary: Python library for object-oriented analysis of climate model output.
   dev_url: https://github.com/exoclim/aeolus
   doc_url: https://exoclim.github.io/aeolus
 
