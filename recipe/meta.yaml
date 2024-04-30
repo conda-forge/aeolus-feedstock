@@ -10,9 +10,11 @@ source:
   sha256: c061b4ecd0d8b55c7a0a39b5b47b377277541010ff6d096225cbc077289e9c60
 
 build:
-  noarch: python
   number: 0
-  script: {{ PYTHON }} python -m pip install --no-deps --ignore-installed .
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
+    - aeolus = aeolus.cli:main
 
 requirements:
   host:
@@ -43,6 +45,11 @@ test:
     - aeolus.model
     - aeolus.plot
     - aeolus.subset
+  commands:
+    - pip check
+    - aeolus --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/exoclim/aeolus
