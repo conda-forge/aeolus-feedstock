@@ -7,14 +7,11 @@ Home: https://github.com/exoclim/aeolus
 
 Package license: LGPL-3.0-only
 
-Summary: Python library for object-oriented analysis of atmospheric model output.
+Summary: Python library for object-oriented analysis of climate model output.
 
 Development: https://github.com/exoclim/aeolus
 
 Documentation: https://exoclim.github.io/aeolus
-
-aeolus is a pure-Python library for object-oriented analysis for atmospheric model output built on top of the scitools iris package <https://github.com/SciTools/iris>. It also includes small extensions to interoperate with MetPy and PyVista.
-
 
 Current build status
 ====================
