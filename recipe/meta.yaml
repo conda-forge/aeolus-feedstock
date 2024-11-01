@@ -1,5 +1,5 @@
 {% set name = "aeolus" %}
-{% set version = "24.4.29.1" %}
+{% set version = "24.11.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d1e40a9326f6b16ff29c03b03ca3a5915418b68886fba4b17b34dee601d42d56
+  sha256: 7618998e9f5b1926ab4927fecbb908f3c7bc646af95157dca9dd037d0f71c9ec
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -23,6 +23,7 @@ requirements:
     - setuptools >=64
     - setuptools-scm >=8
   run:
+    - scitools-iris >=3.10
     - python >=3.10
     - click >=8.1.7
     - click-default-group >=1.2.4
