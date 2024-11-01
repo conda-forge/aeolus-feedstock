@@ -20,7 +20,7 @@ requirements:
   host:
     - python >=3.10
     - pip
-    - setuptools >=64
+    - setuptools >=68
     - setuptools-scm >=8
   run:
     - python >=3.10
@@ -28,14 +28,9 @@ requirements:
     - click-default-group >=1.2.4
     - python >=3.10
     - cached-property >=1.5.1
-    - cartopy >=0.21
-    - cf-units >=3.1
-    - f90nml
-    - iris >=3.9
-    - latlon23 >=1.0.7
+    - scitools-iris >=3.10
     - matplotlib-base >=3.6
-    - numpy !=1.24.3,>=1.21.0
-    - python-stratify
+    - numpy >=1.24
 
 test:
   imports:
