@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "aeolus" %}
 {% set version = "24.11.1.2" %}
 
@@ -6,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d42a23dd8ddbaa2e9a93b3dc522af51154afb36585eb80b5c87d26abcb4d7910
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -18,15 +19,15 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - setuptools >=68
     - setuptools-scm >=8
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - click >=8.1.7
     - click-default-group >=1.2.4
-    - python >=3.10
+    - python >={{ python_min }}
     - cached-property >=1.5.1
     - scitools-iris >=3.10
     - matplotlib-base >=3.6
@@ -46,6 +47,7 @@ test:
     - aeolus --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/exoclim/aeolus
